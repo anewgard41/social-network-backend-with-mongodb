@@ -2,7 +2,7 @@
     "name": "social-network-backend",
     "version": "1.0.1",
     "description": "social network application backend with mongoose",
-    "main": "index.js",
+    "main": "server.js",
     "license": "MIT",
     "scripts": {
       "start": "node server.js",

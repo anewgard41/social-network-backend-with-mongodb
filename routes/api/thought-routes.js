@@ -1,5 +1,5 @@
 const router = require('express').Router();
-
+// importing methods created in thoughts controller
 const {
     getThoughts,
     getSingleThought,
