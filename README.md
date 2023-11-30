@@ -6,7 +6,7 @@ Welcome to your future social network application's backend! This backend utiliz
 
 ## Up and Running 
 
-To run this application you will need Node.js and access to mongoDB. After cloning this repository to your local, you simply just need to run `npm install` then `npm start` or `node server.js`. Viola! The backend is up and ready to go. 
+To run this application you will need Node.js and MongoDB. The Node packages you need are Express and Mongoose. Nodemon was used for development but is not necessary for deployment. After cloning this repository to your local, you simply just need to run `npm install` then `npm start` or `node server.js`. Viola! The backend is up and ready to go. 
 
 After the server is up and running, you can access the backend and assess what data is given by the RESTful APIs endpoints. 
 
