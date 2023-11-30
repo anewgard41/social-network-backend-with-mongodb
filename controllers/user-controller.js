@@ -6,7 +6,7 @@ const userController = {
     async getUsers(req, res) {
         try {
             const dbUserData = await User.find()
-            .select("-__v")
+                .select("-__v")
             res.json(dbUserData);
         } catch (err) {
             console.log(err);
@@ -18,9 +18,9 @@ const userController = {
     async getSingleUser(req, res) {
         try {
             const dbUserData = await User.findOne({ _id: req.params.userId })
-            .select("-__v")
-            .populate("friends")
-            .populate("thoughts");
+                .select("-__v")
+                .populate("friends")
+                .populate("thoughts");
 
             if (!dbUserData) {
                 return res.status(404).json({ message: "No user found with this id!" });
@@ -50,9 +50,9 @@ const userController = {
             const dbUserData = await User.findOneAndUpdate(
                 { _id: req.params.userId },
                 { $set: req.body },
-                { 
-                new: true,
-                runValidators: true 
+                {
+                    new: true,
+                    runValidators: true
                 }
             );
 
@@ -76,7 +76,7 @@ const userController = {
             }
 
             // remove user's associated thoughts
-            await Thought.deleteMany({ _id: { $in: dbUserData.thoughts }});
+            await Thought.deleteMany({ _id: { $in: dbUserData.thoughts } });
             res.json({ message: "User and associated thoughts deleted!" });
 
         } catch {
