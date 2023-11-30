@@ -21,6 +21,7 @@ router.route('/:userId/friends/:friendId').post(addFriend).delete(removeFriend);
 
 module.exports = router;
 
+// userIds for testing:
 // 6567b5649b15831dc4574cba
 // 6567b59a9b15831dc4574cbc
 // 6567b5ab9b15831dc4574cbe

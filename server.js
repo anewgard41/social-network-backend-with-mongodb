@@ -2,6 +2,7 @@ const express = require('express');
 const db = require('./config/connection');
 const routes = require('./routes');
 
+// setting up the express server. Good ol' port 3001. 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
